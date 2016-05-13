@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <base href="/">
+        <title>ReadAdda</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+
+        <!-- inject:js -->
+        <!-- endinject -->
+
+        <!-- inject:css -->
+        <!-- endinject -->
+
+        <!-- 2. Configure SystemJS -->
+        <script>
+            System.config({
+                baseUrl: "/",
+                packages: {
+                    'app': {
+                        defaultExtension: 'js'
+                    }
+                },
+                map: {
+                    "app": "app"
+                }
+            });
+            System.import('app/main.js');
+        </script>
+    </head>
+
+    <!-- 3. Display the application -->
+    <body>
+    <read-adda></read-adda>
+    <!--<ra-header></ra-header>
+    <left></left>
+    <content></content>
+    <right></right>
+    <footer></footer>-->
+    <!--<my-app>Loading...</my-app>-->
+</body>
+</html>

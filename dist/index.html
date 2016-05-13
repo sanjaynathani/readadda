@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <base href="/">
+        <title>ReadAdda</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">    
+
+        <!-- inject:js -->
+        <script src="libs/systemjs/dist/system-polyfills.js"></script>
+        <script src="libs/systemjs/dist/system.js"></script>
+        <script src="libs/angular2/es6/dev/src/testing/shims_for_IE.js"></script>
+        <script src="libs/angular2/bundles/angular2-polyfills.js"></script>
+        <script src="libs/angular2/bundles/angular2.dev.js"></script>
+        <script src="libs/angular2/bundles/http.dev.js"></script>
+        <script src="libs/angular2/bundles/router.dev.js"></script>
+        <script src="libs/rxjs/bundles/Rx.js"></script>
+        <script src="libs/ext/angular.min.js"></script>
+        <script src="libs/ext/jquery.min.js"></script>
+        <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="libs/bootstrap/js/ui-bootstrap-1.2.5.js"></script>
+        <script src="libs/bootstrap/js/ui-bootstrap-tpls-1.2.5.js"></script>
+        <!-- endinject -->
+
+        <!-- inject:css -->
+        <link rel="stylesheet" href="libs/css/styles.css">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" href="libs/bootstrap/css/ui-bootstrap-1.2.5-csp.css">
+        <!-- endinject -->
+
+        <!-- 2. Configure SystemJS -->
+        <script>
+            System.config({
+                baseUrl: "/",
+                packages: {
+                    'app': {
+                        defaultExtension: 'js'
+                    }
+                },
+                map: {
+                    "app": "app"
+                }
+            });
+            System.import('app/main.js');
+        </script>
+    </head>
+
+    <!-- 3. Display the application -->
+    <body>
+    <read-adda></read-adda>
+    <!--<ra-header></ra-header>
+    <left></left>
+    <content></content>
+    <right></right>
+    <footer></footer>-->
+    <!--<my-app>Loading...</my-app>-->
+</body>
+</html>
