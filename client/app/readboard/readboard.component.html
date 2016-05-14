@@ -1,33 +1,38 @@
-<div class="input-group" style="margin-top: -9px;">
-    <div class="well container" style="position: fixed;">
-        <div class="input-group" style="float:left; width: 90%">
+
+<div class="container">
+      <div class="affix">
+          <form id="Form" >
+        <div class="input-group" >
+            
             <input type="text" class="form-control" placeholder="Search for...">
-            <span class="input-group-btn">
+            <div class="input-group-btn">
                 <button class="btn btn-default" type="button">Go!</button>
-            </span>
+            </div>
+            <div style="float: left;">
+                &nbsp;<span class="glyphicon glyphicon-filter" (click)="toggleAdvanceSearch()" style="font-size: 20px; cursor: pointer;"></span>
+            </div>
         </div>
-        <div (click)="toggleAdvanceSearch()" style="float: right; cursor: pointer; margin-right: 1%; margin-top: 0.7% " >
-            <span class="glyphicon glyphicon-cog"></span>
-        </div>
-        <br><br>
+              
         <div [hidden]=!showAdvanceSearch>
             <div>
                 Advance search options!
             </div> 
         </div>
+        </form>
     </div>
+</div>
     
-    <div id="readList" style="margin-top: 7% " (window:scroll)="onScroll()">
-        <div style="margin-bottom: 0.5%;" class="panel panel-primary" *ngFor="#story of stories">
-             <div class="panel-heading">
-                <span style="font-family: sans-serif; font-size: large">{{story.title}}</span>
-                <span style="float: right">{{story.createdDate}}</span>
+    
+    <div id="readList" style="margin-top: 50px;" (window:scroll)="onScroll()">
+        <div style="margin-bottom: 5px;" class="panel panel-primary" *ngFor="#story of stories">
+             <div class="panel-heading" style="height: 30px; padding-top: 9px;">
+                <span style="font-family: sans-serif; font-size: small; font-weight: bold">{{story.title}}</span>
+                <span style="float: right; font-family: sans-serif; font-size: smaller;">{{story.createdDate}}</span>
             </div>
-            <div class="panel-body">{{story.storyShortDescription}}</div>
-            <div class="panel-footer" >
-                <span>{{story.likes}}</span>
-                <span>{{story.disLikes}}</span>
+            <div class="panel-body" style="font-family: sans-serif; font-size: small; font-weight: bold">{{story.storyShortDescription}}</div>
+            <div class="panel-footer" style="height: 20px; padding-top: 0">
+                <span style="font-family: sans-serif; font-size: small; font-weight: bold;">{{story.likes}}</span>
+                <span style="font-family: sans-serif; font-size: small; font-weight: bold">{{story.disLikes}}</span>
             </div>
         </div>
     </div>
-</div>
