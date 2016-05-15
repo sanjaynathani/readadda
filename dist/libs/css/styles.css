@@ -24,3 +24,10 @@
     font-size: x-large;
     font-family: fantasy;
 }
+
+.searchBackGround {
+     width: auto;
+    height: auto;
+    background-color: blue;
+    overflow:auto;
+}
