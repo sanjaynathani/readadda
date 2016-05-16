@@ -34,6 +34,8 @@ var jsNPMDependencies = [
 var appDependencies = [
         'ext/jquery.min.js',
         'ext/angular.min.js',
+        'ext/nicEdit.js',
+        'ext/nicEditorIcons.gif',
 	'css/styles.css',
 	'bootstrap/css/bootstrap.css',
 	'bootstrap/css/bootstrap-theme.min.css',
