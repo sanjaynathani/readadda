@@ -36,7 +36,17 @@ var appDependencies = [
         'ext/angular.min.js',
         'ext/nicEdit.js',
         'ext/nicEditorIcons.gif',
+        'ext/ckeditor.js',
+        'ext/config.js',
+        'ext/styles.js',
+        'ext/lang/*.js',
+        'ext/skins/**/*.*',
+        'ext/plugins/image/dialogs/*.js',
+        'ext/plugins/image/images/*.js',
+        'ext/plugins/widgetbootstrap/**/*.js',
+        'ext/contents.css',
 	'css/styles.css',
+        'ext/plugins/widgetbootstrap/*.css',
 	'bootstrap/css/bootstrap.css',
 	'bootstrap/css/bootstrap-theme.min.css',
 	'bootstrap/css/ui-bootstrap-1.2.5-csp.css',
@@ -70,7 +80,7 @@ gulp.task('index', function(){
     //Let's copy our index into dist  
     var copyIndex = gulp.src('client/index.html')
         .pipe(plugins.inject(gulp.src(['dist/libs/systemjs/**/*.js', 'dist/libs/angular2/**/*.js', 
-                'dist/libs/rxjs/**/*.js', 'dist/libs/ext/*.js', 'dist/libs/bootstrap/**/*.js', 
+                'dist/libs/rxjs/**/*.js', 'dist/libs/ext/**/*.js', 'dist/libs/bootstrap/**/*.js', 
                 'dist/libs/*.js']),{ignorePath: 'dist',addRootSlash: false}))
         .pipe(plugins.inject(gulp.src('dist/libs/**/*.css'),{ignorePath: 'dist',addRootSlash: false}))
         .pipe(gulp.dest('dist'));

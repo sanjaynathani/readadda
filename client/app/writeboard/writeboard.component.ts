@@ -11,7 +11,8 @@ export class WriteBoardComponent implements OnInit {
 
   ngOnInit() {
       console.info('Loading WriteBoard');
-      nicEditors.allTextAreas();
+      //nicEditors.allTextAreas();
+      CKEDITOR.replace( 'editor' );
   }
 
 }
