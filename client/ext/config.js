@@ -15,5 +15,7 @@ CKEDITOR.editorConfig = function( config ) {
             {name: 'clipboard', items: ['Undo', '-', 'Redo']},
             {name: 'document', items: ['Source']}
          ],
+         config.resize_enabled = false,
+         config.height = '300px'; 
          config.extraPlugins = 'fastimage';
 };
