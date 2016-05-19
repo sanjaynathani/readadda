@@ -6,5 +6,14 @@
 CKEDITOR.editorConfig = function( config ) {
 	// Define changes to default configuration here. For example:
 	// config.language = 'fr';
-	// config.uiColor = '#AADC6E';
+	 config.uiColor = '#9AB8F3',
+         config.toolbar = [
+            {name: 'basicstyles', items: ['Bold', 'Italic', 'Strike', '-', 'RemoveFormat']},
+            {name: 'insert', items: ['fastimage']},
+            {name: 'links', items: ['Link', 'Unlink', 'Anchor']},
+            {name: 'paragraph', items: ['NumberedList', 'BulletedList', '-', 'Outdent', '-', 'Indent']},
+            {name: 'clipboard', items: ['Undo', '-', 'Redo']},
+            {name: 'document', items: ['Source']}
+         ],
+         config.extraPlugins = 'fastimage';
 };

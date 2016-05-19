@@ -41,8 +41,7 @@ var appDependencies = [
         'ext/styles.js',
         'ext/lang/*.js',
         'ext/skins/**/*.*',
-        'ext/plugins/image/dialogs/*.js',
-        'ext/plugins/image/images/*.js',
+        
         'ext/plugins/widgetbootstrap/**/*.js',
         'ext/contents.css',
 	'css/styles.css',

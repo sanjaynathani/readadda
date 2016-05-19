@@ -1,6 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
 
-declare var nicEditors: any;
+declare var CKEDITOR: any;
 
 @Component({
   selector: 'writeboard',
@@ -12,7 +12,7 @@ export class WriteBoardComponent implements OnInit {
   ngOnInit() {
       console.info('Loading WriteBoard');
       //nicEditors.allTextAreas();
-      CKEDITOR.replace( 'editor' );
+      CKEDITOR.replace( 'editor');
   }
 
 }
