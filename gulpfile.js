@@ -77,7 +77,7 @@ gulp.task('applibs', function(){
 
 gulp.task('index', function(){
     //Let's copy our index into dist  
-    var copyIndex = gulp.src('client/index.html')
+    var copyIndex = gulp.src(['client/index.html', 'client/.htaccess'])
         .pipe(plugins.inject(gulp.src(['dist/libs/systemjs/**/*.js', 'dist/libs/angular2/**/*.js', 
                 'dist/libs/rxjs/**/*.js', 'dist/libs/ext/**/*.js', 'dist/libs/bootstrap/**/*.js', 
                 'dist/libs/*.js']),{ignorePath: 'dist',addRootSlash: false}))

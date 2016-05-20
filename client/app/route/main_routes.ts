@@ -1,9 +1,14 @@
-import {Route} from './route.interface'
+import { Route } from './route.interface'
 import { ReadBoardComponent } from '../readboard/readboard.component';
 import { WriteBoardComponent } from '../writeboard/writeboard.component';
 import { AuthenticationComponent } from '../security/authentication.component';
 
 export const MainRoutes: Route[] = [
+    {
+        path: '/',
+        name: 'root',
+        redirectTo: ['/ReadBoard']
+    },
     {
         path: '/readboard',
         name: 'ReadBoard',

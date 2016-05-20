@@ -16,6 +16,6 @@ CKEDITOR.editorConfig = function( config ) {
             {name: 'document', items: ['Source']}
          ],
          config.resize_enabled = false,
-         config.height = '300px'; 
+         config.height = '200px'; 
          config.extraPlugins = 'fastimage';
 };
