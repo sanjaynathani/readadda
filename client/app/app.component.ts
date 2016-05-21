@@ -1,4 +1,4 @@
-import {Component, OnInit, provide} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import { LayoutComponent } from './layout/layout.component';
 //import { ReadBoardComponent } from './readboard/readboard.component';
 //import { WriteBoardComponent } from './writeboard/writeboard.component';

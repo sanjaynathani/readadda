@@ -10,7 +10,15 @@ var renderIndex = (req: express.Request, res: express.Response) => {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 }
  
-app.get('/', renderIndex);
+//app.get('/*', renderIndex);
+
+app.get('/', function(req, res) {
+  var url = path.resolve(__dirname, 'index.html');
+  res.sendFile(url, null, function(err) {
+    if (err) res.status(500).send(err);
+    else res.status(200).end();
+  });
+});
  
 var server = app.listen(port, function() {
     var host = server.address().address;

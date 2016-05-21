@@ -9,3 +9,5 @@ export class Authentication {
         console.info('Auth Constructor '+this.isLoggedIn); 
     }
 }
+
+

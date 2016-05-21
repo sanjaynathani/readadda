@@ -3,13 +3,18 @@ import {Observable} from 'rxjs/Observable';
 import {Authentication} from './authentication';
 import {Http, Response} from 'angular2/http';
 
+let loggedIn: boolean;
+
 @Injectable()
 export class AuthenticationService {
   token: string;
   private loginDataUrl = location.origin + '/libs/data/loginData.json';
 
   constructor(private authentication: Authentication, private http: Http) {
+    console.log("Authentication Service constructor");
     this.token = localStorage.getItem('token');
+    this.isLoggedIn();
+    loggedIn=this.authentication.isLoggedIn
   }
 
   login(username: string, password: string) {
@@ -71,6 +76,7 @@ export class AuthenticationService {
     this.authentication.isLoggedIn=false;
     this.authentication.username="";
     this.authentication.password="";
+    loggedIn=false;
     return Observable.of(true);
   }
   
@@ -93,10 +99,12 @@ export class AuthenticationService {
       localStorage.setItem('username', username);
       this.authentication.password="";
       console.log("Is LoggedIn success :"+this.authentication.isLoggedIn);
+      loggedIn=true;
       return this.token;
     }else{
       this.authentication.isLoggedIn=false;
       console.log("Is LoggedIn failed :"+this.authentication.isLoggedIn);
+      loggedIn=false;
       return "";
     }
   }
@@ -104,6 +112,10 @@ export class AuthenticationService {
   private handleError(res: Response){
     return Observable.throw('authentication failure');
   }
+}
 
-
+export function isLoggedIn(){
+    console.log("----"+loggedIn+"----");
+    this.router.navigate( ['ReadBoard']);
+    return loggedIn;
 }

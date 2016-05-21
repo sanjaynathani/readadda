@@ -1,4 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
+import { CanActivate } from 'angular2/router';
+import { isLoggedIn } from '../security/authentication.service';
 
 declare var CKEDITOR: any;
 
@@ -7,7 +9,13 @@ declare var CKEDITOR: any;
   templateUrl: 'writeboard.component.html'
   
 })
+
+@CanActivate(() => isLoggedIn())
 export class WriteBoardComponent implements OnInit {
+    
+  constructor() {
+     
+  }
 
   ngOnInit() {
       console.info('Loading WriteBoard');

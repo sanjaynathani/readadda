@@ -77,7 +77,7 @@ gulp.task('applibs', function(){
 
 gulp.task('index', function(){
     //Let's copy our index into dist  
-    var copyIndex = gulp.src(['client/index.html', 'client/.htaccess'])
+    var copyIndex = gulp.src('client/index.html')
         .pipe(plugins.inject(gulp.src(['dist/libs/systemjs/**/*.js', 'dist/libs/angular2/**/*.js', 
                 'dist/libs/rxjs/**/*.js', 'dist/libs/ext/**/*.js', 'dist/libs/bootstrap/**/*.js', 
                 'dist/libs/*.js']),{ignorePath: 'dist',addRootSlash: false}))
@@ -90,9 +90,9 @@ gulp.task('server', function() {
 	var glob = 'server/**/!(*.spec).ts';
 	var dest = 'dist';
 	return gulp.src(glob, { since: gulp.lastRun('server') })
-                .pipe(sourcemaps.init())
+                //.pipe(sourcemaps.init())
 		.pipe(plugins.typescript(serverProject)).js
-                .pipe(sourcemaps.write())
+                //.pipe(sourcemaps.write())
 		.pipe(gulp.dest(dest));
 		
 });
@@ -100,11 +100,11 @@ gulp.task('server', function() {
 gulp.task('client', function() {
 	var glob = 'client/app/**/!(*.spec).ts';
 	var dest = 'dist/app';
-	return gulp.src(glob, { since: gulp.lastRun('client') })
-                .pipe(sourcemaps.init())
+	return gulp.src(glob,{ since: gulp.lastRun('client') })
+                //.pipe(sourcemaps.init())
 		.pipe(plugins.inlineNg2Template({ useRelativePaths: true }))
 		.pipe(plugins.typescript(clientProject)).js
-                .pipe(sourcemaps.write())
+                //.pipe(sourcemaps.write())
 		.pipe(gulp.dest(dest));
 		
 });
