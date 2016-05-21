@@ -116,6 +116,5 @@ export class AuthenticationService {
 
 export function isLoggedIn(){
     console.log("----"+loggedIn+"----");
-    this.router.navigate( ['ReadBoard']);
     return loggedIn;
 }
