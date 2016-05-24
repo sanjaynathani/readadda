@@ -9,7 +9,7 @@ var renderIndex = function (req, res) {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 };
 //app.get('/*', renderIndex);
-app.get('/', function (req, res) {
+app.get('/*', function (req, res) {
     var url = path.resolve(__dirname, 'index.html');
     res.sendFile(url, null, function (err) {
         if (err)

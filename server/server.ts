@@ -12,7 +12,7 @@ var renderIndex = (req: express.Request, res: express.Response) => {
  
 //app.get('/*', renderIndex);
 
-app.get('/', function(req, res) {
+app.get('/*', function(req, res) {
   var url = path.resolve(__dirname, 'index.html');
   res.sendFile(url, null, function(err) {
     if (err) res.status(500).send(err);
