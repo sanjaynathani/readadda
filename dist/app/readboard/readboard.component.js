@@ -10,9 +10,11 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 const core_1 = require('angular2/core');
 const readboard_service_1 = require('./readboard.service');
+const router_1 = require('angular2/router');
 let ReadBoardComponent = class ReadBoardComponent {
-    constructor(_readboardService) {
+    constructor(_readboardService, router) {
         this._readboardService = _readboardService;
+        this.router = router;
         this.showAdvanceSearch = false;
         this.stories = [];
     }
@@ -35,6 +37,9 @@ let ReadBoardComponent = class ReadBoardComponent {
         if (windowBottom >= docHeight) {
             this.getStories();
         }
+    }
+    openStory(storyId) {
+        this.router.navigate(['StoryBoard', { 'storyId': storyId }]);
     }
 };
 ReadBoardComponent = __decorate([
@@ -66,10 +71,10 @@ ReadBoardComponent = __decorate([
     <div id="readList" style="margin-top: 50px;" (window:scroll)="onScroll()">
         <div style="margin-bottom: 5px;" class="panel panel-primary" *ngFor="#story of stories">
              <div class="panel-heading" style="height: 30px; padding-top: 9px;">
-                <span style="font-family: sans-serif; font-size: small; font-weight: bold">{{story.title}}</span>
+                <span style="font-family: sans-serif; font-size: small; font-weight: bold; cursor: pointer;" (click)="openStory(story.storyId)">{{story.title}}</span>
                 <span style="float: right; font-family: sans-serif; font-size: smaller;">{{story.createdDate}}</span>
             </div>
-            <div class="panel-body" style="font-family: sans-serif; font-size: small; font-weight: bold">{{story.storyShortDescription}}</div>
+            <div class="panel-body" style="font-family: sans-serif; font-size: small; font-weight: bold; cursor: pointer;" (click)="openStory(story.storyId)">{{story.storyShortDescription}}</div>
             <div class="panel-footer" style="height: 20px; padding-top: 0">
                 <span style="font-family: sans-serif; font-size: small; font-weight: bold;">{{story.likes}}</span>
                 <span style="font-family: sans-serif; font-size: small; font-weight: bold">{{story.disLikes}}</span>
@@ -79,6 +84,6 @@ ReadBoardComponent = __decorate([
   `,
         providers: [readboard_service_1.ReadBoardService]
     }), 
-    __metadata('design:paramtypes', [readboard_service_1.ReadBoardService])
+    __metadata('design:paramtypes', [readboard_service_1.ReadBoardService, router_1.Router])
 ], ReadBoardComponent);
 exports.ReadBoardComponent = ReadBoardComponent;

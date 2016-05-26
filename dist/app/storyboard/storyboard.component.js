@@ -9,22 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('angular2/core');
-const secured_directive_1 = require('../security/secured.directive');
-let CenterComponent = class CenterComponent {
+const router_1 = require('angular2/router');
+let StoryBoardComponent = class StoryBoardComponent {
+    constructor(params) {
+        this.storyId = params.get('storyId');
+    }
     ngOnInit() {
-        console.info('Loading Center');
+        console.info('Loading StoryBoard');
     }
 };
-CenterComponent = __decorate([
+StoryBoardComponent = __decorate([
     core_1.Component({
-        selector: 'ra-center',
+        selector: 'storyboard',
         template: `
-    <div style="padding-top: 51px; margin-left: 10%; margin-right: 10%;">
-    <router-outlet></router-outlet>
+    <div style="margin-top: 5%;">
+        <div class="container-fluid">
+            Story Board {{storyId}}
+        </div>
     </div>
-  `,
-        directives: [secured_directive_1.LoggedInRouterOutlet],
+  `
     }), 
-    __metadata('design:paramtypes', [])
-], CenterComponent);
-exports.CenterComponent = CenterComponent;
+    __metadata('design:paramtypes', [router_1.RouteParams])
+], StoryBoardComponent);
+exports.StoryBoardComponent = StoryBoardComponent;

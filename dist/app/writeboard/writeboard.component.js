@@ -9,8 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 const core_1 = require('angular2/core');
-const router_1 = require('angular2/router');
-const authentication_service_1 = require('../security/authentication.service');
 let WriteBoardComponent = class WriteBoardComponent {
     constructor() {
     }
@@ -43,8 +41,7 @@ WriteBoardComponent = __decorate([
         </form>
     </div>
   `
-    }),
-    router_1.CanActivate(() => authentication_service_1.isLoggedIn()), 
+    }), 
     __metadata('design:paramtypes', [])
 ], WriteBoardComponent);
 exports.WriteBoardComponent = WriteBoardComponent;

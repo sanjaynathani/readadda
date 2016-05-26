@@ -1,10 +1,10 @@
 import { Component, OnInit } from 'angular2/core';
-import { ROUTER_DIRECTIVES } from 'angular2/router';
+import { LoggedInRouterOutlet } from '../security/secured.directive';
 
 @Component({
   selector: 'ra-center',
   templateUrl: 'center.component.html',
-  directives: [ROUTER_DIRECTIVES],
+  directives: [LoggedInRouterOutlet],
   
 })
 

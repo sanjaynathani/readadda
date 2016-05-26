@@ -84,6 +84,7 @@ export class AuthenticationService {
     console.log(localStorage.getItem('token'));
     this.authentication.username=localStorage.getItem('username');
     this.authentication.isLoggedIn=!!localStorage.getItem('token');
+    loggedIn=!!localStorage.getItem('token');
     //return !!localStorage.getItem('token');
   }
 

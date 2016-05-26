@@ -10,7 +10,7 @@ declare var CKEDITOR: any;
   
 })
 
-@CanActivate(() => isLoggedIn())
+//@CanActivate(() => isLoggedIn())
 export class WriteBoardComponent implements OnInit {
     
   constructor() {

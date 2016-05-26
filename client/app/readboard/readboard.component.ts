@@ -1,6 +1,7 @@
 import { Component, OnInit } from 'angular2/core';
 import { Story } from './story';
 import { ReadBoardService } from './readboard.service';
+import { Router } from 'angular2/router';
 
 @Component({
   selector: 'readboard',
@@ -14,7 +15,7 @@ export class ReadBoardComponent implements OnInit {
   errorMessage: string;
   showAdvanceSearch = false;
   stories=[];
-  constructor(private _readboardService: ReadBoardService) { }
+  constructor(private _readboardService: ReadBoardService, private router: Router) { }
   
   ngOnInit() {
       console.info('Loading ReadBoard');
@@ -40,7 +41,10 @@ export class ReadBoardComponent implements OnInit {
     if (windowBottom >= docHeight) {
         this.getStories();
     }
-    
+  }
+  
+  openStory(storyId){
+      this.router.navigate(['StoryBoard', {'storyId':storyId}]);
   }
   
 }
