@@ -23,7 +23,7 @@ StoryBoardComponent = __decorate([
         selector: 'storyboard',
         template: `
     <div style="margin-top: 5%;">
-        <div class="container-fluid">
+        <div>
             Story Board {{storyId}}
         </div>
     </div>
