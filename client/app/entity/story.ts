@@ -7,4 +7,5 @@ export interface Story {
   authorName: string;
   likes: number;
   disLikes: number;
+  content: string;
 }

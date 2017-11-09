@@ -1,18 +1,20 @@
-import {Story} from './story';
+import {Story} from '../entity/story';
 import { Injectable } from 'angular2/core';
 import {Http, Response} from 'angular2/http';
 import {Observable}     from 'rxjs/Observable';
+import {URLMapper} from '../ServiceURLConfig';
 
 @Injectable()
 export class ReadBoardService {
     constructor(private http: Http) { }
     
-    private _storyUrl = location.origin+'/libs/data/homeData.json';
+    private _storyListUrl = URLMapper.getURL().storyListURL();
     //private _storyUrl = 'http://localhost:3000/homeData.json';
 
     getStories() {
-        console.log(this._storyUrl);
-        return this.http.get(this._storyUrl)
+        console.log(this. _storyListUrl);
+        
+        return this.http.get(this. _storyListUrl)
             .map(res => <Story[]>res.json().stories)
             .do(data => console.log(data)) 
             .catch(this.handleError);

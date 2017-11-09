@@ -1,5 +1,5 @@
 import { Component, OnInit } from 'angular2/core';
-import { Story } from './story';
+import {Story} from '../entity/story';
 import { ReadBoardService } from './readboard.service';
 import { Router } from 'angular2/router';
 
@@ -7,7 +7,6 @@ import { Router } from 'angular2/router';
   selector: 'readboard',
   templateUrl: 'readboard.component.html',
   providers: [ReadBoardService]
-  
 })
 export class ReadBoardComponent implements OnInit {
   //stories: Story[];
