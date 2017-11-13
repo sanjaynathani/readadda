@@ -1,0 +1,27 @@
+ReadAdda
+	
+What is it?
+	ReadAdda is a place where you can read/write stories. So what's story? Story is anything that is in your mind but should be on paper and needs to be shared or any article or piece of information you want to share.
+	
+Sounds like blog, whats different?
+	Connection. Connect with like minded. Accept and share connection request. Like, dislike, comment and discuss on story. Digital group discussion!!!
+	
+Still its like blog
+	Okay! The goal here is to encourage you to read, write and express yourself. By providing a minimalistic and simple yet coherent and cohesive platform. Quick response time, less navigation, less routes. No unnecessary complex features.
+	
+Round 1 (Version 1.0)
+	Four pages, 1) Read board (Main) 2) Story board 3) Write board 4) Login/Registration 
+	And Cards (small dialogs boxes) 
+	
+	Read Board
+		List of stories with Title, Story short description, date created, last edited date, creator, editor, no. of reads, no. of likes, no. of dislikes, no. of comments, overall rating.
+		Links
+			Creator (Creator Info card follow, connect request)
+			Editor (Editor Info card follow, connect request)
+			Like (Thumb up icon vote up if logged in user else ask for registration)
+			DisLike (Thumb up icon vote down if logged in user else ask for registration)
+			No of comments (Scrollable comment list card with write option at bottom if logged in user else ask for registration)
+			
+	Story Board
+		Expanded selected story from Read Board with complete story and everything mentioned in listed view.
+	
