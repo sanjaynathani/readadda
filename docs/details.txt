@@ -39,4 +39,13 @@ Round 1 (Version 1.0)
 	
 	Features:
 		Read Board:
-			
+			Universal search box on header
+			List of panel with stories
+			Undefinte scroll
+		Write Board:
+			Title box
+			WYSIWYG editor
+			Search tag box
+			Publish button
+		Authentication:
+			SignIn/SignOut button top right on header
