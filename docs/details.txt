@@ -10,18 +10,33 @@ Still its like blog
 	Okay! The goal here is to encourage you to read, write and express yourself. By providing a minimalistic and simple yet coherent and cohesive platform. Quick response time, less navigation, less routes. No unnecessary complex features.
 	
 Round 1 (Version 1.0)
-	Four pages, 1) Read board (Main) 2) Story board 3) Write board 4) Login/Registration 
+	Four pages, 1) Read board (Main) 2) Story board 3) Write board 4) Login/Registration
 	And Cards (small dialogs boxes) 
 	
 	Read Board
 		List of stories with Title, Story short description, date created, last edited date, creator, editor, no. of reads, no. of likes, no. of dislikes, no. of comments, overall rating.
 		Links
-			Creator (Creator Info card follow, connect request)
-			Editor (Editor Info card follow, connect request)
+			Creator (Creator Info card with follow, connect request options)
+			Editor (Editor Info card with follow, connect request options)
 			Like (Thumb up icon vote up if logged in user else ask for registration)
 			DisLike (Thumb up icon vote down if logged in user else ask for registration)
 			No of comments (Scrollable comment list card with write option at bottom if logged in user else ask for registration)
 			
 	Story Board
 		Expanded selected story from Read Board with complete story and everything mentioned in listed view.
+		Options to edit if current user is author or editor with rights. Edit opens currently story in Write Board
+		Options to share current story on various platforms (gmail, facebook, twiter link, whatsapp link etc) if logged in user is author or editor with rights
+		
+	Write Board
+		WYIWYG editor to add title, content and search tags.
+		Publish and cancel button. Click publish opens publish Card (Option to privately publish, publicly publish, restricted publish for selected users from connection)
+		
+	Login/Registration
+		Usual login or registration page. Register with email verification.
+			Registration fields
+				email, password, confirm password, dob, phone number (optional)
+				
 	
+	Features:
+		Read Board:
+			
