@@ -7,6 +7,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "gulp build"
   },
+  "engines": {
+    "node": "9.2.0",
+    "npm": "5.5.1"
+  },
   "keywords": [],
   "author": "Sanjay Nathani",
   "license": "ISC",
