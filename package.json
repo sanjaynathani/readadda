@@ -44,6 +44,7 @@
     "run-sequence": "1.1.5",
     "rxjs": "5.0.0-beta.2",
     "systemjs": "0.19.25",
+    "typescript": "^2.6.1",
     "zone.js": "0.6.6"
   },
   "devDependencies": {
